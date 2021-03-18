@@ -124,20 +124,20 @@ void main() {
 
 	while (1) {
 
-		printf("\n1. Inicijalizacija reda.\n"
-			"2. Ucitavanje elemenata.\n"
-			"3. Prikazivanje prvog elementa.\n"
-			"4. Brisanje elemenata.\n"
-			"5. Maksimalni kapacitet.\n"
-			"6. Broj elemenata.\n"
-			"0. Izlaz.\n"
+		printf("\n1. Initialize a queue.\n"
+			"2. Inser an element.\n"
+			"3. Show first element in queue.\n"
+			"4. Remove an element.\n"
+			"5. Get capacity.\n"
+			"6. Get number of elements.\n"
+			"0. Exit.\n"
 			"Vas izbor?\n");
 		scanf("%d", &choice);
 
 		switch (choice) {
 
 		case 1:
-			printf("Unesite maksimalni kapacitet niza\n");
+			printf("Insert queue's capacity\n");
 			scanf("%d,", &maxCapacity);
 
 			if (maxCapacity > MAX)
@@ -154,7 +154,7 @@ void main() {
 
 			// Add item into PQ
 		case 2:
-			printf("Unesite element u red.\n");
+			printf("Insert element in queue.\n");
 			scanf("%d", &number);
 			Insert(pq, number);
 			break;
@@ -180,7 +180,6 @@ void main() {
 			break;
 
 		case 0:
-			printf("Uspesno ste izasli iz programa.\n");
 			exit(1);
 
 			free(pq);
